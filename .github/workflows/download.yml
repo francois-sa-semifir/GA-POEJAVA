@@ -13,7 +13,7 @@ jobs:
       - name: upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: artifact
+          name: artifact2
           path: artifact2.txt
 
   download:
