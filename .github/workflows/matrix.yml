@@ -1,0 +1,16 @@
+name: fruits
+
+on: workflow_dispatch
+
+jobs:
+  Fruits:
+    strategy:
+        fail-fast: true
+        max-parallel: 2
+        matrix:
+          fruits: [Pomme, poire, pêche, Cerise]
+          personnes: [Geralt, Ashen One, Tarnished, Link]
+    runs-on: ubuntu-latest
+    steps:
+        - name: mange
+          run: echo "${{matrix.personnes}} mange une ${{matrix.fruits}}, et il adore ça !"
